@@ -28,7 +28,8 @@ jobs:
       run: |
         source $HOME/miniconda/etc/profile.d/conda.sh
         conda activate base
-        conda env update --file .yml --name base
+        conda env update --file environment.yml --name base
+        conda install pytorch numpy -c pytorch
       shell: bash
     - name: Lint with flake8
       run: |
